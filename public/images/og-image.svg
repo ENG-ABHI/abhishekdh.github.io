@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="a" cx="72%" cy="20%"><stop stop-color="#274c9b"/><stop offset="1" stop-color="#080c1c"/></radialGradient>
+    <linearGradient id="b" x1="0" x2="1"><stop stop-color="#72e6ff"/><stop offset="1" stop-color="#a48aff"/></linearGradient>
+    <pattern id="c" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M0 0H44V44" fill="none" stroke="#80c8ff" stroke-opacity=".1"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#a)"/><rect width="1200" height="630" fill="url(#c)"/>
+  <circle cx="950" cy="255" r="165" fill="none" stroke="#7deaff" stroke-opacity=".35" stroke-width="2"/><circle cx="950" cy="255" r="115" fill="none" stroke="#b098ff" stroke-opacity=".35" stroke-width="2"/>
+  <g stroke="#82eaff" stroke-opacity=".4"><path d="M950 255 835 143M950 255l133-94M950 255l-110 134M950 255l131 113"/></g>
+  <circle cx="950" cy="255" r="54" fill="#152b62" stroke="#8aefff" stroke-width="2"/><text x="950" y="270" fill="#e9fbff" font-family="Arial,sans-serif" font-size="32" text-anchor="middle">AI</text>
+  <text x="100" y="210" fill="#86ecff" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">AI / ML ENGINEER</text>
+  <text x="100" y="300" fill="url(#b)" font-family="Arial,sans-serif" font-size="64" font-weight="700">Abhishek</text>
+  <text x="100" y="370" fill="url(#b)" font-family="Arial,sans-serif" font-size="64" font-weight="700">Dhaulakhandi</text>
+  <text x="100" y="443" fill="#b7c4e3" font-family="Arial,sans-serif" font-size="24">NLP · Computer Vision · Generative AI · Vision Models</text>
+</svg>

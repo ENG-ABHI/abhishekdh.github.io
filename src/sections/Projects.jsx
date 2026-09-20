@@ -1,0 +1,10 @@
+import { ArrowUpRight, Brain, Code2, ExternalLink, MessageSquareMore } from 'lucide-react'
+import { m } from 'framer-motion'
+import SectionHeading from '../components/SectionHeading'
+
+const visuals = [Brain, MessageSquareMore]
+function ProjectCard({ project, index }) { const Visual = visuals[index % visuals.length]; const image = project.image?.startsWith('/') ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` : project.image; return <m.article className={`project-card project-${project.accent || 'cyan'}`} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} whileHover={{ y: -8 }} transition={{ duration: .35 }}>
+ <div className="project-art">{image ? <img src={image} alt={`${project.title} preview`} loading="lazy" /> : <><div className="art-grid" /><Visual /><span>0{index + 1} / PROJECT</span></>}</div>
+ <div className="project-body"><div className="project-category">{project.category}</div><h3>{project.title}</h3><p>{project.description}</p><div className="tech-tags">{project.technologies.map(tech => <span key={tech}>{tech}</span>)}</div><div className="project-actions">{project.github && <a href={project.github} target="_blank" rel="noreferrer" aria-label={`GitHub for ${project.title}`}><Code2 size={17} /> Code</a>}{project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`Live demo for ${project.title}`}><ExternalLink size={17} /> Live Demo</a>}{!project.github && !project.demo && <span className="project-status">Case study in progress <ArrowUpRight size={15} /></span>}</div></div>
+ </m.article> }
+export default function Projects({ data }) { return <section id="projects" className="section section-pad"><SectionHeading eyebrow="03 / SELECTED WORK" title="Exploring problems through models." copy="Projects at the junction of deep learning, retrieval, and real-world utility." /><div className="projects-grid">{data.projects.map((project, index) => <ProjectCard project={project} index={index} key={project.title} />)}</div></section> }
